@@ -1,0 +1,14 @@
+body{
+    background-color: #3399ff;
+}
+
+.form-control{
+    width:200px;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.toggleB{
+    display: inline-block;
+    margin-left: 1100px;
+}

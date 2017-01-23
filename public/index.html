@@ -1,23 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>CSS/HTML Workshop with Drivy</title>
-  </head>
-  <body>
-    <div id="car">
-      <input class="model" type="text" placeholder="Car model"/>
-      <input class="price-by-day" type="number" placeholder="Price by day"/>
-      <input class="price-by-km" type="number" placeholder="Price by km"/>
-    </div>
-    <div id="rental">
-      <input class="begin" type="date" placeholder="Rental begin date"/>
-      <input class="end" type="date" placeholder="Rental end date"/>
-      <input class="distance" type="number" placeholder="Distance in km"/>
-      <input class="option" type="checkbox" placeholder="Deductible option"/>
-    </div>
-    <button id="compute">Compute</button>
-    <div id="actors"></div>
-    <script id="template" type="x-tmpl-mustache">
+<head>
+  <title>CSS/HTML Workshop with Drivy</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="index.css" rel="stylesheet">
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div id="topcontainer">
+  <p align="center"> <img src="Images\Drivy.jpg" height="200px"></p>
+</div>
+<br><br>
+<div id="car">
+  <img src="Images\voiture.jpg" height="100px" style="margin-left:130px">
+  <input class="model form-control" type="text" placeholder="Car model">
+</div>
+<br>
+<div id="price">
+  <img src="Images\depenses.jpg" height="100px" style="margin-left:130px">
+  <input class="price-by-day form-control" type="number" placeholder="Price by day" style="margin-left:56px"/>
+  <input class="price-by-km form-control" type="number" placeholder="Price by km"/>
+</div>
+<br>
+<button id="compute" type="button" class="btn btn-success btn-lg" style="margin-left:1000px">Compute</button>
+<br>
+<div id="rental">
+  <img src="Images\calendar.jpg" height="100px" style="margin-left:130px">
+  <input class="begin form-control" type="date" placeholder="Rental begin date" style="margin-left:56px"/>
+  <input class="end form-control" type="date" placeholder="Rental end date"/>
+</div>
+<br>
+<div id="date">
+  <img src="Images\roadmap.jpg" height="100px" style="margin-left:130px">
+  <input class="distance form-control" type="number" placeholder="Distance in km" style="margin-left:8px"/>
+</div>
+<br>
+<div id="toggleB">
+  <img src="Images\assistance.jpg" height="100px" style="margin-left:130px">
+  <strong>Deductible option:</strong>
+  <input class="option" type="checkbox" data-toggle="toggle" data-onstyle="success" data-offstyle="default" data-size="large"/>
+</div>
+<br>
+<div id="actors"></div>
+<script id="template" type="x-tmpl-mustache">
       {{#actors}}
         <div class="actor">
           <span>{{who}}</span>
@@ -26,8 +55,12 @@
         </div>
       {{/actors}}
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
-    <script src="drivy.js"></script>
-    <script src="index.js"></script>
-  </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+<script src="drivy.js"></script>
+<script src="index.js"></script>
+</body>
+
 </html>
